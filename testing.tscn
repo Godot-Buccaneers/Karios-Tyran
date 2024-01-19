@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmqhv32027j78"]
+
+[ext_resource type="Script" path="res://Scripts/ShipHandler.gd" id="1_3c0h0"]
+[ext_resource type="Script" path="res://Scripts/Snapper3D.gd" id="3_y2v0n"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sw581"]
+load_path = "res://.godot/imported/T_Spase_64.png-80c586e7242ac278aa5549f41c8deeec.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpa8i"]
+albedo_texture = SubResource("CompressedTexture2D_sw581")
+metallic = 0.4
+
+[node name="Testing" type="Node3D"]
+
+[node name="ShipHandler3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64, 0)
+script = ExtResource("1_3c0h0")
+cord = Vector3i(0, 1, 0)
+shipSceneID = 2
+faceForward = true
+shipTexture = SubResource("StandardMaterial3D_bpa8i")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.959309, 0, 0.282358, 0, 1, 0, -0.282358, 0, 0.959309, 192, 128, 640)
+fov = 47.8
+script = ExtResource("3_y2v0n")
+cord = Vector3i(3, 2, 5)
+
+[node name="OmniLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 189.491, 0)
+light_energy = 12.893

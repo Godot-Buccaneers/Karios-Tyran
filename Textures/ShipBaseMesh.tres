@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bhvo7vuda5wwb"]
+
+[ext_resource type="Texture2D" uid="uid://befu5g81usw71" path="res://Textures/T_Spase_64.png" id="1_r2g1k"]
+
+[resource]
+albedo_texture = ExtResource("1_r2g1k")
+metallic = 0.4

@@ -1,0 +1,653 @@
+[gd_scene load_steps=95 format=3 uid="uid://blfx1r1rthtyf"]
+
+[ext_resource type="PackedScene" uid="uid://ce816iwpgea48" path="res://ship_layout.tscn" id="1_lic0t"]
+[ext_resource type="Script" path="res://Scripts/Snapper3D.gd" id="2_5ftrq"]
+[ext_resource type="Script" path="res://Scripts/Drager2D.gd" id="3_mj22j"]
+[ext_resource type="Texture2D" uid="uid://ccdrdbrgphggn" path="res://Models/Green Grid lines.png" id="5_icavo"]
+[ext_resource type="PackedScene" uid="uid://d3q334as1kpq0" path="res://Models/LinedCube3D.tscn" id="6_7jria"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sjnxp"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pl48"]
+albedo_texture = SubResource("CompressedTexture2D_sjnxp")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_52did"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16i42"]
+albedo_texture = SubResource("CompressedTexture2D_52did")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxhrt"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7b1i"]
+albedo_texture = SubResource("CompressedTexture2D_uxhrt")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ci4x0"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6myj"]
+albedo_texture = SubResource("CompressedTexture2D_ci4x0")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_41bi2"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fevkp"]
+albedo_texture = SubResource("CompressedTexture2D_41bi2")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x7nov"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0b54"]
+albedo_texture = SubResource("CompressedTexture2D_x7nov")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_okxcv"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0etgr"]
+albedo_texture = SubResource("CompressedTexture2D_okxcv")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r4n25"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwd56"]
+albedo_texture = SubResource("CompressedTexture2D_r4n25")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8o26s"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7epas"]
+albedo_texture = SubResource("CompressedTexture2D_8o26s")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3m1ir"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2kok"]
+albedo_texture = SubResource("CompressedTexture2D_3m1ir")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_spntx"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlaf5"]
+albedo_texture = SubResource("CompressedTexture2D_spntx")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_is3c0"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bb38"]
+albedo_texture = SubResource("CompressedTexture2D_is3c0")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_obsi3"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q03u"]
+albedo_texture = SubResource("CompressedTexture2D_obsi3")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h47qp"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jl3l1"]
+albedo_texture = SubResource("CompressedTexture2D_h47qp")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ji60k"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yop47"]
+albedo_texture = SubResource("CompressedTexture2D_ji60k")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s76kt"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21625"]
+albedo_texture = SubResource("CompressedTexture2D_s76kt")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h1fyj"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8id6m"]
+albedo_texture = SubResource("CompressedTexture2D_h1fyj")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v64mn"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvfxi"]
+albedo_texture = SubResource("CompressedTexture2D_v64mn")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dji7p"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bosym"]
+albedo_texture = SubResource("CompressedTexture2D_dji7p")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m8qmd"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ru11q"]
+albedo_texture = SubResource("CompressedTexture2D_m8qmd")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uo7w2"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0u38"]
+albedo_texture = SubResource("CompressedTexture2D_uo7w2")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yfpv4"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhwuu"]
+albedo_texture = SubResource("CompressedTexture2D_yfpv4")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u2sr5"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svkq3"]
+albedo_texture = SubResource("CompressedTexture2D_u2sr5")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5exqb"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c26wp"]
+albedo_texture = SubResource("CompressedTexture2D_5exqb")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xtydg"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvgu2"]
+albedo_texture = SubResource("CompressedTexture2D_xtydg")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xakyc"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5716j"]
+albedo_texture = SubResource("CompressedTexture2D_xakyc")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vtgui"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7krp"]
+albedo_texture = SubResource("CompressedTexture2D_vtgui")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t4sgl"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuofy"]
+albedo_texture = SubResource("CompressedTexture2D_t4sgl")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lhgep"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghvyi"]
+albedo_texture = SubResource("CompressedTexture2D_lhgep")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0obgp"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkqvs"]
+albedo_texture = SubResource("CompressedTexture2D_0obgp")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7guhf"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bl40n"]
+albedo_texture = SubResource("CompressedTexture2D_7guhf")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86ksi"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0vhe"]
+albedo_texture = SubResource("CompressedTexture2D_86ksi")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_scnst"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nykls"]
+albedo_texture = SubResource("CompressedTexture2D_scnst")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l5cbu"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an4qf"]
+albedo_texture = SubResource("CompressedTexture2D_l5cbu")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43d5b"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btfa0"]
+albedo_texture = SubResource("CompressedTexture2D_43d5b")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sj40k"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jxht"]
+albedo_texture = SubResource("CompressedTexture2D_sj40k")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3phsf"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8oqng"]
+albedo_texture = SubResource("CompressedTexture2D_3phsf")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_555gp"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3gsg"]
+albedo_texture = SubResource("CompressedTexture2D_555gp")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rlpnr"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oorvc"]
+albedo_texture = SubResource("CompressedTexture2D_rlpnr")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wc7j0"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qopfq"]
+albedo_texture = SubResource("CompressedTexture2D_wc7j0")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lkyav"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxqlu"]
+albedo_texture = SubResource("CompressedTexture2D_lkyav")
+metallic = 0.4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t2no0"]
+load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8iahm"]
+albedo_texture = SubResource("CompressedTexture2D_t2no0")
+metallic = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3v80g"]
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_16nvw"]
+material = SubResource("StandardMaterial3D_3v80g")
+size = Vector2(448, 896)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wa4l"]
+transparency = 1
+albedo_texture = ExtResource("5_icavo")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_givl2"]
+material = SubResource("StandardMaterial3D_5wa4l")
+size = Vector2(448, 448)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tff4k"]
+material = SubResource("StandardMaterial3D_5wa4l")
+size = Vector2(448, 896)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Ship Layout" parent="." instance=ExtResource("1_lic0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48, -320)
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, 3, -10)
+snapRatio = 16
+
+[node name="Ship Layout2" parent="." instance=ExtResource("1_lic0t")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 48, -704)
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, 3, -22)
+snapRatio = 16
+
+[node name="ShipHandler3D2" parent="Ship Layout2" index="0"]
+shipTexture = SubResource("StandardMaterial3D_8pl48")
+
+[node name="ShipHandler3D14" parent="Ship Layout2" index="1"]
+shipTexture = SubResource("StandardMaterial3D_16i42")
+
+[node name="ShipHandler3D15" parent="Ship Layout2" index="2"]
+shipTexture = SubResource("StandardMaterial3D_j7b1i")
+
+[node name="ShipHandler3D16" parent="Ship Layout2" index="3"]
+shipTexture = SubResource("StandardMaterial3D_u6myj")
+
+[node name="ShipHandler3D17" parent="Ship Layout2" index="4"]
+shipTexture = SubResource("StandardMaterial3D_fevkp")
+
+[node name="ShipHandler3D3" parent="Ship Layout2" index="5"]
+shipTexture = SubResource("StandardMaterial3D_j0b54")
+
+[node name="ShipHandler3D4" parent="Ship Layout2" index="6"]
+shipTexture = SubResource("StandardMaterial3D_0etgr")
+
+[node name="ShipHandler3D8" parent="Ship Layout2" index="7"]
+shipTexture = SubResource("StandardMaterial3D_rwd56")
+
+[node name="ShipHandler3D9" parent="Ship Layout2" index="8"]
+shipTexture = SubResource("StandardMaterial3D_7epas")
+
+[node name="ShipHandler3D5" parent="Ship Layout2" index="9"]
+shipTexture = SubResource("StandardMaterial3D_f2kok")
+
+[node name="ShipHandler3D10" parent="Ship Layout2" index="10"]
+shipTexture = SubResource("StandardMaterial3D_mlaf5")
+
+[node name="ShipHandler3D11" parent="Ship Layout2" index="11"]
+shipTexture = SubResource("StandardMaterial3D_3bb38")
+
+[node name="ShipHandler3D12" parent="Ship Layout2" index="12"]
+shipTexture = SubResource("StandardMaterial3D_1q03u")
+
+[node name="ShipHandler3D13" parent="Ship Layout2" index="13"]
+shipTexture = SubResource("StandardMaterial3D_jl3l1")
+
+[node name="ShipHandler3D6" parent="Ship Layout2" index="14"]
+shipTexture = SubResource("StandardMaterial3D_yop47")
+
+[node name="ShipHandler3D7" parent="Ship Layout2" index="15"]
+shipTexture = SubResource("StandardMaterial3D_21625")
+
+[node name="ShipHandler3D" parent="Ship Layout2" index="16"]
+shipTexture = SubResource("StandardMaterial3D_8id6m")
+
+[node name="ShipHandler3D18" parent="Ship Layout2" index="17"]
+shipTexture = SubResource("StandardMaterial3D_jvfxi")
+
+[node name="ShipHandler3D19" parent="Ship Layout2" index="18"]
+shipTexture = SubResource("StandardMaterial3D_bosym")
+
+[node name="ShipHandler3D20" parent="Ship Layout2" index="19"]
+shipTexture = SubResource("StandardMaterial3D_ru11q")
+
+[node name="ShipHandler3D21" parent="Ship Layout2" index="20"]
+shipTexture = SubResource("StandardMaterial3D_n0u38")
+
+[node name="ShipHandler3D22" parent="Ship Layout2" index="21"]
+shipTexture = SubResource("StandardMaterial3D_vhwuu")
+
+[node name="ShipHandler3D23" parent="Ship Layout2" index="22"]
+shipTexture = SubResource("StandardMaterial3D_svkq3")
+
+[node name="ShipHandler3D24" parent="Ship Layout2" index="23"]
+shipTexture = SubResource("StandardMaterial3D_c26wp")
+
+[node name="ShipHandler3D25" parent="Ship Layout2" index="24"]
+shipTexture = SubResource("StandardMaterial3D_uvgu2")
+
+[node name="ShipHandler3D26" parent="Ship Layout2" index="25"]
+shipTexture = SubResource("StandardMaterial3D_5716j")
+
+[node name="ShipHandler3D27" parent="Ship Layout2" index="26"]
+shipTexture = SubResource("StandardMaterial3D_g7krp")
+
+[node name="ShipHandler3D28" parent="Ship Layout2" index="27"]
+shipTexture = SubResource("StandardMaterial3D_nuofy")
+
+[node name="ShipHandler3D29" parent="Ship Layout2" index="28"]
+shipTexture = SubResource("StandardMaterial3D_ghvyi")
+
+[node name="ShipHandler3D30" parent="Ship Layout2" index="29"]
+shipTexture = SubResource("StandardMaterial3D_jkqvs")
+
+[node name="ShipHandler3D31" parent="Ship Layout2" index="30"]
+shipTexture = SubResource("StandardMaterial3D_bl40n")
+
+[node name="ShipHandler3D32" parent="Ship Layout2" index="31"]
+shipTexture = SubResource("StandardMaterial3D_d0vhe")
+
+[node name="ShipHandler3D33" parent="Ship Layout2" index="32"]
+shipTexture = SubResource("StandardMaterial3D_nykls")
+
+[node name="ShipHandler3D34" parent="Ship Layout2" index="33"]
+shipTexture = SubResource("StandardMaterial3D_an4qf")
+
+[node name="ShipHandler3D35" parent="Ship Layout2" index="34"]
+shipTexture = SubResource("StandardMaterial3D_btfa0")
+
+[node name="ShipHandler3D36" parent="Ship Layout2" index="35"]
+shipTexture = SubResource("StandardMaterial3D_6jxht")
+
+[node name="ShipHandler3D37" parent="Ship Layout2" index="36"]
+shipTexture = SubResource("StandardMaterial3D_8oqng")
+
+[node name="ShipHandler3D38" parent="Ship Layout2" index="37"]
+shipTexture = SubResource("StandardMaterial3D_d3gsg")
+
+[node name="ShipHandler3D39" parent="Ship Layout2" index="38"]
+shipTexture = SubResource("StandardMaterial3D_oorvc")
+
+[node name="ShipHandler3D40" parent="Ship Layout2" index="39"]
+shipTexture = SubResource("StandardMaterial3D_qopfq")
+
+[node name="ShipHandler3D41" parent="Ship Layout2" index="40"]
+shipTexture = SubResource("StandardMaterial3D_sxqlu")
+
+[node name="ShipHandler3D42" parent="Ship Layout2" index="41"]
+shipTexture = SubResource("StandardMaterial3D_8iahm")
+
+[node name="Camera Point X" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 320, -512)
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, 5, -4)
+
+[node name="Camera Point Y" type="Node3D" parent="Camera Point X"]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Point X/Camera Point Y"]
+transform = Transform3D(-1.07284e-07, 0, -1, 0, 1, 0, 1, 0, -1.07284e-07, -775, 0, 3.05176e-05)
+fov = 46.0
+
+[node name="Camera2D" type="Camera2D" parent="Camera Point X/Camera Point Y/Camera3D"]
+
+[node name="Drager2D" type="Node2D" parent="Camera Point X/Camera Point Y/Camera3D/Camera2D"]
+script = ExtResource("3_mj22j")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Camera Point X/Camera Point Y"]
+transform = Transform3D(-2.18557e-07, -5, -8.7423e-07, 5, -2.18557e-07, 0, -3.82138e-14, -8.7423e-07, 5, 512, 0, 0)
+mesh = SubResource("PlaneMesh_16nvw")
+skeleton = NodePath("../../..")
+script = ExtResource("2_5ftrq")
+cord = Vector3i(16, 0, 0)
+snapRatio = 32
+
+[node name="Arena" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 320, -512)
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, 5, -4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -448)
+visible = false
+mesh = SubResource("PlaneMesh_givl2")
+skeleton = NodePath("../..")
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, 0, -7)
+snapRatio = 32
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 448)
+visible = false
+mesh = SubResource("PlaneMesh_givl2")
+skeleton = NodePath("../..")
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, 0, 7)
+snapRatio = 32
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -224, 0)
+visible = false
+mesh = SubResource("PlaneMesh_tff4k")
+skeleton = NodePath("../..")
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, -7, 0)
+snapRatio = 32
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Arena"]
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 224, 0)
+visible = false
+mesh = SubResource("PlaneMesh_tff4k")
+skeleton = NodePath("../..")
+script = ExtResource("2_5ftrq")
+cord = Vector3i(0, 7, 0)
+snapRatio = 32
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Arena"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 224, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_tff4k")
+skeleton = NodePath("../..")
+script = ExtResource("2_5ftrq")
+cord = Vector3i(7, 0, 0)
+snapRatio = 32
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Arena"]
+transform = Transform3D(1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, -224, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_tff4k")
+skeleton = NodePath("../..")
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-7, 0, 0)
+snapRatio = 32
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192, -192, 0)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-3, -3, 0)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192, 192, 0)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(3, 3, 0)
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192, -192, 0)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(3, -3, 0)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192, 192, 0)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-3, 3, 0)
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256, -256, 256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-4, -4, 2)
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256, 256, 256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(4, 4, 2)
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256, -256, 256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(4, -4, 2)
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256, 256, 256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-4, 4, 2)
+
+[node name="LinedCube3D" parent="Arena" instance=ExtResource("6_7jria")]
+transform = Transform3D(48.6, 0, 0, 0, 48.6, 0, 0, 0, 48.6, 0, 0, 0)
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256, -256, -256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-4, -4, -2)
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256, 256, -256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(4, 4, -2)
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 256, -256, -256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(4, -4, -2)
+
+[node name="OmniLight3D16" type="OmniLight3D" parent="Arena"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256, 256, -256)
+light_energy = 4.0
+omni_range = 689.407
+omni_attenuation = 0.00612957
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-4, 4, -2)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -575.0
+offset_top = 301.0
+offset_right = -76.0
+offset_bottom = 324.0
+text = "Note : Colisions dont work yet along with a pawn ship bug"
+
+[editable path="Ship Layout2"]
