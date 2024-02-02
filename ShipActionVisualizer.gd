@@ -1,6 +1,7 @@
 @tool
 class_name ShipActionVisualizer extends Node3D
 
+@export var shipsClickable:bool = true
 var visualShips:Array[ShipHandler3D] = [] :
 	set(value):
 		if value == []:
@@ -10,7 +11,7 @@ var visualShips:Array[ShipHandler3D] = [] :
 		visualShips = value
 	get:
 		return visualShips#.filter(func(a:ShipHandler3D):return a != null)
-
+var proccessingClick = false
 var toggled : bool = false
 @export var tintColor : Color :
 	get:
@@ -20,16 +21,30 @@ var toggled : bool = false
 		else:
 			return Color.RED
 
-
+@onready var classSignal = preload("res://CodeBelt/AnyShipClickedSignal.tres")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	(get_parent() as ShipHandler3D).ship_clicked.connect(_on_ship_clicked)
+	classSignal.class_signal.connect(_on_other_ship_clicked)
 
+
+
+func _on_other_ship_clicked() : 
+	if toggled:
+		remove_ships()
+	toggled = false
+	
 
 func _on_ship_clicked(clickedShip=null):
-	print(get_parent().get_children())
+	if proccessingClick: return 
+	proccessingClick = true
 	await get_parent().get_child(3).click_stopped
-	if not get_parent().get_child(2).mouseInArea : return
+	if not get_parent().get_child(2).mouseInArea : 
+		proccessingClick = false
+		return
+	
+	
+	if toggled == false : classSignal.class_signal.emit()
 	toggled = not toggled
 	if toggled:
 		if get_parent().shipSceneID == 0: #Alpha
@@ -114,7 +129,7 @@ func _on_ship_clicked(clickedShip=null):
 			add_ship_ray(Vector3i.DOWN+Vector3i.RIGHT,6)
 			add_ship_ray(Vector3i.UP+Vector3i.BACK,6)
 			add_ship_ray(Vector3i.DOWN+Vector3i.BACK,6)
-		elif get_parent().shipSceneID == 5: #Lamba
+		elif get_parent().shipSceneID == 6: #Lamba
 			add_ship_ray(Vector3i.RIGHT,6)
 			add_ship_ray(Vector3i.LEFT,6)
 			add_ship_ray(Vector3i.UP,6)
@@ -131,26 +146,34 @@ func _on_ship_clicked(clickedShip=null):
 			add_ship_ray(Vector3i.UP+Vector3i.BACK+Vector3i.LEFT,6)
 			add_ship_ray(Vector3i.DOWN+Vector3i.BACK+Vector3i.LEFT,6)
 	else:
-		remove_ships()
+		await remove_ships()
+	
+	proccessingClick = false
 
 func add_ship_ray(directionCord,distance,canKill=true,inverted=false):
 	for dist in distance:
 		var ship = await add_ship()
 		ship.cord = directionCord * (dist+1)
 		if not ship.visible:
-			ship.queue_free()
+			remove_ship(ship)
 			return
+		await get_tree().physics_frame
+		await get_tree().physics_frame
+		await get_tree().physics_frame
+		if ship == null or ship.area3D == null:return
 		if ship.area3D.has_overlapping_areas():
-			if canKill:
+			if ship.area3D.get_overlapping_areas()[0].get_parent() in get_parent().get_parent().get_children():
+				remove_ship(ship)
+			elif canKill:
 				ship.scale *= 1.5
 			else:
-				ship.queue_free()
+				remove_ship(ship)
+			
 			return
 		if inverted and not ship.area3D.has_overlapping_areas():
-			ship.queue_free()
+			remove_ship(ship)
 			return
 	
-
 func add_ship():
 	var visualShip = ShipHandler3D.new()
 	visualShip.canSeeMoves = false
@@ -164,17 +187,23 @@ func add_ship():
 	visualShip.shipTexture.albedo_color.a = -.2
 	visualShip.ship_clicked.connect(move_to_clicked_ship)
 	var a = func():
-		while visualShip.shipTexture.albedo_color.a < .4:
+		for i in .7 / FakeDelta.delta:
 			await get_tree().physics_frame
 			if visualShip == null : return
-			visualShip.shipTexture.albedo_color.a = lerp(visualShip.shipTexture.albedo_color.a,.75, FakeDelta.delta / 2.0)
+			visualShip.shipTexture.albedo_color.a = lerp(visualShip.shipTexture.albedo_color.a,1.0, FakeDelta.delta)
 	a.call()
 	return visualShip
+
+func remove_ship(ship):
+	visualShips.pop_at(visualShips.find(ship))
+	ship.queue_free()
 
 func remove_ships():
 	if visualShips == [] or visualShips[-1] == null: 
 		visualShips = []
 		return
+	for ship in visualShips:
+		ship.area3D.queue_free()
 	while visualShips[-1].shipTexture.albedo_color.a < .4:
 		await get_tree().physics_frame
 	while visualShips[-1].shipTexture.albedo_color.a > .0:
@@ -186,6 +215,7 @@ func remove_ships():
 	visualShips = []
 
 func move_to_clicked_ship(clickedShip):
+	if not shipsClickable: return
 	remove_ships()
 	while visualShips != []:
 		await get_tree().physics_frame

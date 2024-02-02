@@ -1,303 +1,305 @@
-[gd_scene load_steps=95 format=3 uid="uid://blfx1r1rthtyf"]
+[gd_scene load_steps=97 format=3 uid="uid://blfx1r1rthtyf"]
 
 [ext_resource type="PackedScene" uid="uid://ce816iwpgea48" path="res://ship_layout.tscn" id="1_lic0t"]
 [ext_resource type="Script" path="res://Scripts/Snapper3D.gd" id="2_5ftrq"]
 [ext_resource type="Script" path="res://Scripts/Drager2D.gd" id="3_mj22j"]
+[ext_resource type="Script" path="res://Scripts/Camera3D.gd" id="3_vv70p"]
+[ext_resource type="Script" path="res://CodeBelt/DragInfo.gd" id="5_0qof5"]
 [ext_resource type="Texture2D" uid="uid://ccdrdbrgphggn" path="res://Models/Green Grid lines.png" id="5_icavo"]
 [ext_resource type="PackedScene" uid="uid://d3q334as1kpq0" path="res://Models/LinedCube3D.tscn" id="6_7jria"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sjnxp"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v1lpx"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8pl48"]
-albedo_texture = SubResource("CompressedTexture2D_sjnxp")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5ppm"]
+albedo_texture = SubResource("CompressedTexture2D_v1lpx")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_52did"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mu0dc"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16i42"]
-albedo_texture = SubResource("CompressedTexture2D_52did")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guyvp"]
+albedo_texture = SubResource("CompressedTexture2D_mu0dc")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uxhrt"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_65xam"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j7b1i"]
-albedo_texture = SubResource("CompressedTexture2D_uxhrt")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cq0t"]
+albedo_texture = SubResource("CompressedTexture2D_65xam")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ci4x0"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_froil"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6myj"]
-albedo_texture = SubResource("CompressedTexture2D_ci4x0")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ybea7"]
+albedo_texture = SubResource("CompressedTexture2D_froil")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_41bi2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_82rpo"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fevkp"]
-albedo_texture = SubResource("CompressedTexture2D_41bi2")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_them0"]
+albedo_texture = SubResource("CompressedTexture2D_82rpo")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x7nov"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j0ob0"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j0b54"]
-albedo_texture = SubResource("CompressedTexture2D_x7nov")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f85aw"]
+albedo_texture = SubResource("CompressedTexture2D_j0ob0")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_okxcv"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yo3kt"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0etgr"]
-albedo_texture = SubResource("CompressedTexture2D_okxcv")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhjs0"]
+albedo_texture = SubResource("CompressedTexture2D_yo3kt")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r4n25"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ksbo8"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwd56"]
-albedo_texture = SubResource("CompressedTexture2D_r4n25")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajv6g"]
+albedo_texture = SubResource("CompressedTexture2D_ksbo8")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8o26s"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jmyeq"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7epas"]
-albedo_texture = SubResource("CompressedTexture2D_8o26s")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lobof"]
+albedo_texture = SubResource("CompressedTexture2D_jmyeq")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3m1ir"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bd41o"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2kok"]
-albedo_texture = SubResource("CompressedTexture2D_3m1ir")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_730mq"]
+albedo_texture = SubResource("CompressedTexture2D_bd41o")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_spntx"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n80ma"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlaf5"]
-albedo_texture = SubResource("CompressedTexture2D_spntx")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wkhgb"]
+albedo_texture = SubResource("CompressedTexture2D_n80ma")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_is3c0"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ystkc"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3bb38"]
-albedo_texture = SubResource("CompressedTexture2D_is3c0")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsthi"]
+albedo_texture = SubResource("CompressedTexture2D_ystkc")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_obsi3"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ik28v"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q03u"]
-albedo_texture = SubResource("CompressedTexture2D_obsi3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hxh34"]
+albedo_texture = SubResource("CompressedTexture2D_ik28v")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h47qp"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7unty"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jl3l1"]
-albedo_texture = SubResource("CompressedTexture2D_h47qp")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mq1ou"]
+albedo_texture = SubResource("CompressedTexture2D_7unty")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ji60k"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ep6fr"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yop47"]
-albedo_texture = SubResource("CompressedTexture2D_ji60k")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sexay"]
+albedo_texture = SubResource("CompressedTexture2D_ep6fr")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s76kt"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gtlnn"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21625"]
-albedo_texture = SubResource("CompressedTexture2D_s76kt")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehrqj"]
+albedo_texture = SubResource("CompressedTexture2D_gtlnn")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h1fyj"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rxs0b"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8id6m"]
-albedo_texture = SubResource("CompressedTexture2D_h1fyj")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wewo"]
+albedo_texture = SubResource("CompressedTexture2D_rxs0b")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v64mn"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qdehh"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jvfxi"]
-albedo_texture = SubResource("CompressedTexture2D_v64mn")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pqvw"]
+albedo_texture = SubResource("CompressedTexture2D_qdehh")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dji7p"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bv2aw"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bosym"]
-albedo_texture = SubResource("CompressedTexture2D_dji7p")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cadi5"]
+albedo_texture = SubResource("CompressedTexture2D_bv2aw")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m8qmd"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mtd7n"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ru11q"]
-albedo_texture = SubResource("CompressedTexture2D_m8qmd")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlq0m"]
+albedo_texture = SubResource("CompressedTexture2D_mtd7n")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uo7w2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ajims"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n0u38"]
-albedo_texture = SubResource("CompressedTexture2D_uo7w2")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w8248"]
+albedo_texture = SubResource("CompressedTexture2D_ajims")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yfpv4"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8wq4t"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vhwuu"]
-albedo_texture = SubResource("CompressedTexture2D_yfpv4")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2aiu"]
+albedo_texture = SubResource("CompressedTexture2D_8wq4t")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u2sr5"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8qlap"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svkq3"]
-albedo_texture = SubResource("CompressedTexture2D_u2sr5")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2an1u"]
+albedo_texture = SubResource("CompressedTexture2D_8qlap")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5exqb"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pyqxm"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c26wp"]
-albedo_texture = SubResource("CompressedTexture2D_5exqb")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1sud"]
+albedo_texture = SubResource("CompressedTexture2D_pyqxm")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xtydg"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_trfgt"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvgu2"]
-albedo_texture = SubResource("CompressedTexture2D_xtydg")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjijx"]
+albedo_texture = SubResource("CompressedTexture2D_trfgt")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xakyc"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kbmjx"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5716j"]
-albedo_texture = SubResource("CompressedTexture2D_xakyc")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvm3b"]
+albedo_texture = SubResource("CompressedTexture2D_kbmjx")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vtgui"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dpmep"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g7krp"]
-albedo_texture = SubResource("CompressedTexture2D_vtgui")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76t6c"]
+albedo_texture = SubResource("CompressedTexture2D_dpmep")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t4sgl"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_44yk5"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nuofy"]
-albedo_texture = SubResource("CompressedTexture2D_t4sgl")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a4gh8"]
+albedo_texture = SubResource("CompressedTexture2D_44yk5")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lhgep"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k1a4w"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ghvyi"]
-albedo_texture = SubResource("CompressedTexture2D_lhgep")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihmh3"]
+albedo_texture = SubResource("CompressedTexture2D_k1a4w")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0obgp"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rmn26"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkqvs"]
-albedo_texture = SubResource("CompressedTexture2D_0obgp")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gntwo"]
+albedo_texture = SubResource("CompressedTexture2D_rmn26")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7guhf"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ad0m8"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bl40n"]
-albedo_texture = SubResource("CompressedTexture2D_7guhf")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p5tne"]
+albedo_texture = SubResource("CompressedTexture2D_ad0m8")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_86ksi"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i21f7"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0vhe"]
-albedo_texture = SubResource("CompressedTexture2D_86ksi")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0c6al"]
+albedo_texture = SubResource("CompressedTexture2D_i21f7")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_scnst"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_citbu"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nykls"]
-albedo_texture = SubResource("CompressedTexture2D_scnst")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i7gm7"]
+albedo_texture = SubResource("CompressedTexture2D_citbu")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l5cbu"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4mhtg"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_an4qf"]
-albedo_texture = SubResource("CompressedTexture2D_l5cbu")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myc03"]
+albedo_texture = SubResource("CompressedTexture2D_4mhtg")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_43d5b"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tmtt2"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btfa0"]
-albedo_texture = SubResource("CompressedTexture2D_43d5b")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsvng"]
+albedo_texture = SubResource("CompressedTexture2D_tmtt2")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sj40k"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v2cdb"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6jxht"]
-albedo_texture = SubResource("CompressedTexture2D_sj40k")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1lmxy"]
+albedo_texture = SubResource("CompressedTexture2D_v2cdb")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3phsf"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_53jj3"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8oqng"]
-albedo_texture = SubResource("CompressedTexture2D_3phsf")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srpnf"]
+albedo_texture = SubResource("CompressedTexture2D_53jj3")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_555gp"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qgy7r"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3gsg"]
-albedo_texture = SubResource("CompressedTexture2D_555gp")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd1ts"]
+albedo_texture = SubResource("CompressedTexture2D_qgy7r")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rlpnr"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5u7ev"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oorvc"]
-albedo_texture = SubResource("CompressedTexture2D_rlpnr")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iai3d"]
+albedo_texture = SubResource("CompressedTexture2D_5u7ev")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wc7j0"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5j048"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qopfq"]
-albedo_texture = SubResource("CompressedTexture2D_wc7j0")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuma4"]
+albedo_texture = SubResource("CompressedTexture2D_5j048")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lkyav"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_46wxg"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sxqlu"]
-albedo_texture = SubResource("CompressedTexture2D_lkyav")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wauwn"]
+albedo_texture = SubResource("CompressedTexture2D_46wxg")
 metallic = 0.4
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t2no0"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fkvgw"]
 load_path = "res://.godot/imported/T_Spase_blue.png-aecb12ecf9a85d10443edd6ef275afa2.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8iahm"]
-albedo_texture = SubResource("CompressedTexture2D_t2no0")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovith"]
+albedo_texture = SubResource("CompressedTexture2D_fkvgw")
 metallic = 0.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3v80g"]
@@ -323,142 +325,184 @@ size = Vector2(448, 896)
 [node name="Node3D" type="Node3D"]
 
 [node name="Ship Layout" parent="." instance=ExtResource("1_lic0t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48, -320)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 48, -128)
 script = ExtResource("2_5ftrq")
-cord = Vector3i(0, 3, -10)
+cord = Vector3i(0, 3, -4)
 snapRatio = 16
 
 [node name="Ship Layout2" parent="." instance=ExtResource("1_lic0t")]
-transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 48, -704)
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 0, 48, -896)
 script = ExtResource("2_5ftrq")
-cord = Vector3i(0, 3, -22)
+cord = Vector3i(0, 3, -28)
 snapRatio = 16
 
 [node name="ShipHandler3D2" parent="Ship Layout2" index="0"]
-shipTexture = SubResource("StandardMaterial3D_8pl48")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_y5ppm")
 
 [node name="ShipHandler3D14" parent="Ship Layout2" index="1"]
-shipTexture = SubResource("StandardMaterial3D_16i42")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_guyvp")
 
 [node name="ShipHandler3D15" parent="Ship Layout2" index="2"]
-shipTexture = SubResource("StandardMaterial3D_j7b1i")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_3cq0t")
 
 [node name="ShipHandler3D16" parent="Ship Layout2" index="3"]
-shipTexture = SubResource("StandardMaterial3D_u6myj")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_ybea7")
 
 [node name="ShipHandler3D17" parent="Ship Layout2" index="4"]
-shipTexture = SubResource("StandardMaterial3D_fevkp")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_them0")
 
 [node name="ShipHandler3D3" parent="Ship Layout2" index="5"]
-shipTexture = SubResource("StandardMaterial3D_j0b54")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_f85aw")
 
 [node name="ShipHandler3D4" parent="Ship Layout2" index="6"]
-shipTexture = SubResource("StandardMaterial3D_0etgr")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_nhjs0")
 
 [node name="ShipHandler3D8" parent="Ship Layout2" index="7"]
-shipTexture = SubResource("StandardMaterial3D_rwd56")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_ajv6g")
 
 [node name="ShipHandler3D9" parent="Ship Layout2" index="8"]
-shipTexture = SubResource("StandardMaterial3D_7epas")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_lobof")
 
 [node name="ShipHandler3D5" parent="Ship Layout2" index="9"]
-shipTexture = SubResource("StandardMaterial3D_f2kok")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_730mq")
 
 [node name="ShipHandler3D10" parent="Ship Layout2" index="10"]
-shipTexture = SubResource("StandardMaterial3D_mlaf5")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_wkhgb")
 
 [node name="ShipHandler3D11" parent="Ship Layout2" index="11"]
-shipTexture = SubResource("StandardMaterial3D_3bb38")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_nsthi")
 
 [node name="ShipHandler3D12" parent="Ship Layout2" index="12"]
-shipTexture = SubResource("StandardMaterial3D_1q03u")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_hxh34")
 
 [node name="ShipHandler3D13" parent="Ship Layout2" index="13"]
-shipTexture = SubResource("StandardMaterial3D_jl3l1")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_mq1ou")
 
 [node name="ShipHandler3D6" parent="Ship Layout2" index="14"]
-shipTexture = SubResource("StandardMaterial3D_yop47")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_sexay")
 
 [node name="ShipHandler3D7" parent="Ship Layout2" index="15"]
-shipTexture = SubResource("StandardMaterial3D_21625")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_ehrqj")
 
 [node name="ShipHandler3D" parent="Ship Layout2" index="16"]
-shipTexture = SubResource("StandardMaterial3D_8id6m")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_4wewo")
 
 [node name="ShipHandler3D18" parent="Ship Layout2" index="17"]
-shipTexture = SubResource("StandardMaterial3D_jvfxi")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_5pqvw")
 
 [node name="ShipHandler3D19" parent="Ship Layout2" index="18"]
-shipTexture = SubResource("StandardMaterial3D_bosym")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_cadi5")
 
 [node name="ShipHandler3D20" parent="Ship Layout2" index="19"]
-shipTexture = SubResource("StandardMaterial3D_ru11q")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_tlq0m")
 
 [node name="ShipHandler3D21" parent="Ship Layout2" index="20"]
-shipTexture = SubResource("StandardMaterial3D_n0u38")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_w8248")
 
 [node name="ShipHandler3D22" parent="Ship Layout2" index="21"]
-shipTexture = SubResource("StandardMaterial3D_vhwuu")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_f2aiu")
 
 [node name="ShipHandler3D23" parent="Ship Layout2" index="22"]
-shipTexture = SubResource("StandardMaterial3D_svkq3")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_2an1u")
 
 [node name="ShipHandler3D24" parent="Ship Layout2" index="23"]
-shipTexture = SubResource("StandardMaterial3D_c26wp")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_m1sud")
 
 [node name="ShipHandler3D25" parent="Ship Layout2" index="24"]
-shipTexture = SubResource("StandardMaterial3D_uvgu2")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_xjijx")
 
 [node name="ShipHandler3D26" parent="Ship Layout2" index="25"]
-shipTexture = SubResource("StandardMaterial3D_5716j")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_gvm3b")
 
 [node name="ShipHandler3D27" parent="Ship Layout2" index="26"]
-shipTexture = SubResource("StandardMaterial3D_g7krp")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_76t6c")
 
 [node name="ShipHandler3D28" parent="Ship Layout2" index="27"]
-shipTexture = SubResource("StandardMaterial3D_nuofy")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_a4gh8")
 
 [node name="ShipHandler3D29" parent="Ship Layout2" index="28"]
-shipTexture = SubResource("StandardMaterial3D_ghvyi")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_ihmh3")
 
 [node name="ShipHandler3D30" parent="Ship Layout2" index="29"]
-shipTexture = SubResource("StandardMaterial3D_jkqvs")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_gntwo")
 
 [node name="ShipHandler3D31" parent="Ship Layout2" index="30"]
-shipTexture = SubResource("StandardMaterial3D_bl40n")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_p5tne")
 
 [node name="ShipHandler3D32" parent="Ship Layout2" index="31"]
-shipTexture = SubResource("StandardMaterial3D_d0vhe")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_0c6al")
 
 [node name="ShipHandler3D33" parent="Ship Layout2" index="32"]
-shipTexture = SubResource("StandardMaterial3D_nykls")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_i7gm7")
 
 [node name="ShipHandler3D34" parent="Ship Layout2" index="33"]
-shipTexture = SubResource("StandardMaterial3D_an4qf")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_myc03")
 
 [node name="ShipHandler3D35" parent="Ship Layout2" index="34"]
-shipTexture = SubResource("StandardMaterial3D_btfa0")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_qsvng")
 
 [node name="ShipHandler3D36" parent="Ship Layout2" index="35"]
-shipTexture = SubResource("StandardMaterial3D_6jxht")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_1lmxy")
 
 [node name="ShipHandler3D37" parent="Ship Layout2" index="36"]
-shipTexture = SubResource("StandardMaterial3D_8oqng")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_srpnf")
 
 [node name="ShipHandler3D38" parent="Ship Layout2" index="37"]
-shipTexture = SubResource("StandardMaterial3D_d3gsg")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_qd1ts")
 
 [node name="ShipHandler3D39" parent="Ship Layout2" index="38"]
-shipTexture = SubResource("StandardMaterial3D_oorvc")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_iai3d")
 
 [node name="ShipHandler3D40" parent="Ship Layout2" index="39"]
-shipTexture = SubResource("StandardMaterial3D_qopfq")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_fuma4")
 
 [node name="ShipHandler3D41" parent="Ship Layout2" index="40"]
-shipTexture = SubResource("StandardMaterial3D_sxqlu")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_wauwn")
 
 [node name="ShipHandler3D42" parent="Ship Layout2" index="41"]
-shipTexture = SubResource("StandardMaterial3D_8iahm")
+isClickable = false
+shipTexture = SubResource("StandardMaterial3D_ovith")
 
 [node name="Camera Point X" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 320, -512)
@@ -469,13 +513,22 @@ cord = Vector3i(0, 5, -4)
 transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Camera Point X/Camera Point Y"]
-transform = Transform3D(-1.07284e-07, 0, -1, 0, 1, 0, 1, 0, -1.07284e-07, -775, 0, 3.05176e-05)
-fov = 46.0
+transform = Transform3D(-1.62921e-07, 0, -1, 0, 1, 0, 1, 0, -1.62921e-07, -775, 0, 3.05176e-05)
+fov = 50.0
+script = ExtResource("3_vv70p")
 
 [node name="Camera2D" type="Camera2D" parent="Camera Point X/Camera Point Y/Camera3D"]
 
 [node name="Drager2D" type="Node2D" parent="Camera Point X/Camera Point Y/Camera3D/Camera2D"]
+visible = false
 script = ExtResource("3_mj22j")
+
+[node name="DragInfo" type="Node2D" parent="Camera Point X/Camera Point Y/Camera3D/Camera2D"]
+script = ExtResource("5_0qof5")
+zoom_speed = 1.0
+pan_speed = 0.4
+can_pan = true
+can_zoom = true
 
 [node name="MeshInstance3D7" type="MeshInstance3D" parent="Camera Point X/Camera Point Y"]
 transform = Transform3D(-2.18557e-07, -5, -8.7423e-07, 5, -2.18557e-07, 0, -3.82138e-14, -8.7423e-07, 5, 512, 0, 0)
@@ -609,7 +662,9 @@ script = ExtResource("2_5ftrq")
 cord = Vector3i(-4, 4, 2)
 
 [node name="LinedCube3D" parent="Arena" instance=ExtResource("6_7jria")]
-transform = Transform3D(48.6, 0, 0, 0, 48.6, 0, 0, 0, 48.6, 0, 0, 0)
+transform = Transform3D(32.1942, 0, 0, 0, 32.4953, 0, 0, 0, 32.3458, -192, -192, 384)
+script = ExtResource("2_5ftrq")
+cord = Vector3i(-3, -3, 3)
 
 [node name="OmniLight3D13" type="OmniLight3D" parent="Arena"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -256, -256, -256)
@@ -644,6 +699,7 @@ script = ExtResource("2_5ftrq")
 cord = Vector3i(-4, 4, -2)
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -575.0
 offset_top = 301.0
 offset_right = -76.0

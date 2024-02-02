@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://Scripts/ShipHandler.gd" id="1_3c0h0"]
 [ext_resource type="Script" path="res://Scripts/Snapper3D.gd" id="3_y2v0n"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sw581"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yiuho"]
 load_path = "res://.godot/imported/T_Spase_64.png-80c586e7242ac278aa5549f41c8deeec.s3tc.ctex"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bpa8i"]
-albedo_texture = SubResource("CompressedTexture2D_sw581")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36iic"]
+albedo_texture = SubResource("CompressedTexture2D_yiuho")
 metallic = 0.4
 
 [node name="Testing" type="Node3D"]
@@ -16,9 +16,9 @@ metallic = 0.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64, 0)
 script = ExtResource("1_3c0h0")
 cord = Vector3i(0, 1, 0)
-shipSceneID = 2
+shipSceneID = 3
 faceForward = true
-shipTexture = SubResource("StandardMaterial3D_bpa8i")
+shipTexture = SubResource("StandardMaterial3D_36iic")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.959309, 0, 0.282358, 0, 1, 0, -0.282358, 0, 0.959309, 192, 128, 640)

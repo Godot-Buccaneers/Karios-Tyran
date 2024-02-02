@@ -7,7 +7,7 @@ class_name ShipHandler3D extends Node3D
 	set(value):
 		cord = value
 		
-		position = Vector3(cord*Vector3i(1,1,1)*64)
+		position = Vector3(cord*Vector3i(1,1,2)*64)
 
 var shipNode : Node3D = null
 var shipScene
@@ -19,7 +19,7 @@ var shipScene
 		shipNode = await shipScene.instantiate()
 		add_child(shipNode)
 		shipNode.scale = Vector3.ONE * 1.5
-		shipNode.scale.x = .5
+		shipNode.scale.x = .9
 		shipNode.position.z = 5
 		faceForward = faceForward
 		shipTexture = shipTexture
@@ -51,7 +51,7 @@ signal mouse_exited
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if not Engine.is_editor_hint() and isClickable:
+	if not Engine.is_editor_hint() and (isClickable or canSeeMoves):
 		area3D = Area3D.new()
 		await add_child(area3D)
 		var collisionShape3D:CollisionShape3D = CollisionShape3D.new()
@@ -69,7 +69,9 @@ func _ready():
 	if canSeeMoves:
 		add_child(MouseInArea.new())
 		add_child(ClickInfo.new())
-		add_child(ShipActionVisualizer.new())
+		var a = ShipActionVisualizer.new()
+		add_child(a)
+		if not isClickable : a.shipsClickable = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -82,6 +84,9 @@ func _on_area_3d_input_event(camera, event, position, normal, shape_idx):
 		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 			ship_clicked.emit(self)
 			_on_ship_clicked()
+	if event is InputEventScreenTouch:
+		ship_clicked.emit(self)
+		_on_ship_clicked()
 
 func _on_ship_clicked():
 	pass

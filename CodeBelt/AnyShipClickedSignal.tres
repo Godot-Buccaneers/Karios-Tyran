@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="ClassSignal" load_steps=2 format=3 uid="uid://bb6ejlnngk5eu"]
+
+[ext_resource type="Script" path="res://CodeBelt/ClassSignal.gd" id="1_pbd0p"]
+
+[resource]
+script = ExtResource("1_pbd0p")

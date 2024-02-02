@@ -1,10 +1,14 @@
 class_name ClickInfo extends Node
 
+
 var clickedPoint:Vector2 = Vector2.ZERO
 var draggedPoint:Vector2 = Vector2.ZERO
 var draggedVect:Vector2 : 
 	get:
 		return clickedPoint.direction_to(draggedPoint) * clickedPoint.distance_to(draggedPoint)
+
+
+
 
 var drag_tolerance = 10.0
 var clickTrigger = MOUSE_BUTTON_LEFT
@@ -18,6 +22,7 @@ var is_clicked:bool :
 		if is_clicked != previousValue:
 			if is_clicked: click_started.emit() ; _on_click_started()
 			else: click_stopped.emit() ; _on_click_stopped()
+
 		return is_clicked
 
 signal drag_started
@@ -40,6 +45,15 @@ func _input(event):
 		if event.pressed:
 			clickedPoint = event.position
 			draggedPoint = clickedPoint
+		else:
+			await get_tree().physics_frame
+			await get_tree().physics_frame
+			await get_tree().physics_frame
+			await get_tree().physics_frame
+			click_stopped.emit()
+
+
+		
 	elif event is InputEventMouseButton:
 		if event.button_index == clickTrigger and event.pressed:
 			clickedPoint = event.global_position
@@ -47,10 +61,13 @@ func _input(event):
 	
 	if event is InputEventScreenDrag: # Updates the Dragged Point
 		draggedPoint = event.position
+
+		#print(event.index)
 	elif event is InputEventMouseMotion:
 		if Input.is_mouse_button_pressed(clickTrigger):
 			draggedPoint = event.global_position
 	
+	is_clicked
 	is_dragging # Triggers Click & Drag Related Signals
 
 func _on_click_started():
